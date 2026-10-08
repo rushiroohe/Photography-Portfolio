@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #0b0f0c;
+
+    color: white;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background-color: #101610;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+
+.logo {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+    color: #9bd66f;
+    font-family:'Times New Roman', Times, serif, serif;
+}
+
+
+nav ul {
+    display: flex;
+
+    list-style: none;
+
+    gap: 35px;
+}
+
+
+nav ul li a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+    font-family:'Times New Roman', Times, serif, serif;
+}
+
+
+nav ul li a:hover {
+    color: #9bd66f;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 100px 8%;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("camera.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    font-family:'Times New Roman', Times, serif, serif;
+}
+
+
+.hero-content {
+    max-width: 650px;
+}
+
+
+.small-title {
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+    color: #9bd66f;
+   
+}
+
+
+.hero h1 {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+    
+}
+
+
+.hero h1 span {
+    color: #9bd66f;
+}
+
+
+.hero h2 {
+    font-size: 28px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+.shot-on {
+    margin-top: 15px;
+
+    color: #9bd66f;
+
+    font-weight: bold;
+}
+
+
+.button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 13px 28px;
+
+    background-color: #9bd66f;
+
+    color: #0b0f0c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+    background-color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 100px 8%;
+
+    background-color: #111711;
+}
+
+
+.about-text {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.section-title {
+    color: #9bd66f;
+
+    letter-spacing: 4px;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+.about h2,
+.gallery h2,
+.contact h2 {
+
+    font-size: 40px;
+
+    margin-bottom: 25px;
+}
+
+
+.about-text > p {
+
+    color: #c8c8c8;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+.camera-info {
+    margin-top: 20px;
+
+    color: #9bd66f !important;
+
+    font-size: 17px;
+}
+
+
+.camera-info strong {
+    color: white;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+
+.categories div {
+
+    width: 30%;
+
+    padding: 25px;
+
+    background-color: #182018;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+.categories div:hover {
+
+    transform: translateY(-7px);
+}
+
+
+.categories h3 {
+
+    margin-bottom: 10px;
+}
+
+
+.categories p {
+
+    color: #aaa;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+
+    padding: 100px 6%;
+
+    text-align: center;
+}
+
+
+.gallery-intro {
+
+    color: #aaa;
+
+    margin-bottom: 40px;
+}
+
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.photo-card {
+
+    background-color: #151a15;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+}
+
+
+.photo-card:hover {
+
+    transform: translateY(-8px);
+}
+
+
+/* =========================
+   PHOTO LINK
+========================= */
+
+.photo-card a {
+
+    display: block;
+
+    cursor: pointer;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+
+/* PHOTO ZOOM */
+
+.photo-card a:hover img {
+
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   PHOTO INFORMATION
+========================= */
+
+.photo-info {
+
+    padding: 20px;
+
+    text-align: left;
+}
+
+
+.photo-info h3 {
+
+    margin-bottom: 7px;
+}
+
+
+.photo-info p {
+
+    color: #9bd66f;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background-color: #111711;
+}
+
+
+.contact > p {
+
+    color: #aaa;
+
+    line-height: 1.7;
+}
+
+
+.contact-box {
+
+    margin: 35px auto 0;
+
+    max-width: 550px;
+
+    padding: 25px;
+
+    background-color: #182018;
+
+    border-radius: 10px;
+}
+
+
+.contact-box p {
+
+    margin: 15px;
+}
+
+
+.contact-box strong {
+
+    color: #9bd66f;
+}
+
+
+/* INSTAGRAM + PHONE + EMAIL LINKS */
+
+.contact-box a {
+
+    color: #9bd66f;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.contact-box a:hover {
+
+    color: white;
+}
+
+
+.device {
+
+    color: #aaa;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 35px;
+
+    background-color: #080b08;
+}
+
+
+footer h3 {
+
+    margin-bottom: 10px;
+}
+
+
+footer p {
+
+    color: #888;
+
+    margin: 7px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+
+    nav {
+
+        padding: 0 5%;
+    }
+
+
+    .logo {
+
+        font-size: 20px;
+    }
+
+
+    nav ul {
+
+        gap: 12px;
+    }
+
+
+    nav ul li a {
+
+        font-size: 13px;
+    }
+
+
+    .hero {
+
+        padding: 100px 7%;
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 22px;
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+    }
+
+
+    .categories {
+
+        flex-direction: column;
+    }
+
+
+    .categories div {
+
+        width: 100%;
+    }
+
+
+    .photo-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .photo-card img {
+
+        height: 450px;
+    }
+
+
+    .about h2,
+    .gallery h2,
+    .contact h2 {
+
+        font-size: 32px;
+    }
+
+
+    .contact-box {
+
+        width: 100%;
+
+        padding: 20px;
+    }
+
+}
